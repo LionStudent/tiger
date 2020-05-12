@@ -1,11 +1,14 @@
 import matplotlib
 import matplotlib.pyplot as plt
+import math
 
 # Configure matplotlib to write PNG files
 matplotlib.use('Agg')
 
 # Get some x-values
-xAxis = list(range(-20,20))
+xAxis = list(range(0,628))
+for i in range(0, 628):
+    xAxis[i] = i/10
 
 # Write a function to build our y-values
 def parabola(xValues):
@@ -14,7 +17,7 @@ def parabola(xValues):
   # get each number in the given list of x-values
   for x in xValues:
     # compute the square of each value
-    y = x*x
+    y = math.sin(x)
     # add the squared value to the list of results
     yValues.append(y)
   # give the resultant list of squared valuse to the caller of this function 
@@ -35,7 +38,7 @@ style = 'ro'
 plt.plot(sliceXAxis , sliceYAxis , style)
 
 # Specify the region of the plot we wish to display
-plt.axis([-20, 20, 0, 400])
+plt.axis([0, 6.3, -1, 1])
 
 # Save our plot to the local disk drive
 filename = 'graph.png'
