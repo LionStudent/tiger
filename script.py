@@ -19,6 +19,6 @@ xAxis = sine.sinePlotX(maxRange, digits)
 yAxis = sine.sinePlotY(xAxis)
 
 plt.plot(xAxis , yAxis , style)
-plt.axis([0, maxRange + 0.1, -1, 1])
+plt.axis([0, maxRange + 0.1, -1.5, 1.5])
 filename = 'graph.png'
 plt.savefig(filename)
