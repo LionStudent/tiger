@@ -1,1 +1,3 @@
 matplotlib
+flask
+mysql-connector
